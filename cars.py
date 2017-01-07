@@ -64,11 +64,11 @@ car_dict = {make[1]:{model[1]:[color[1] for available_car_color in available_car
 
 # STEP 4 PRINT IT OUT
 
-line_break = '\n'
-divider_break = '------------------------'
-print("hi" + line_break + divider_break + line_break + "bye")
+# line_break = '\n'
+# divider_break = '------------------------'
+# print("hi" + line_break + divider_break + line_break + "bye")
 
-# for k, v in car_dict.items():
-#   print('\n' + k + '\n-----------------------------')
-#   for model in v:
-#     print("{0} available in {1}".format(model, ', '.join(v[model])))
+for k, v in car_dict.items():
+  print('\n' + k + '\n-----------------------------')
+  for model in v:
+    print("{0} available in {1}".format(model, ', '.join(v[model])))
