@@ -59,15 +59,17 @@ example_dict = {
 
 # STEP 3 LOOP THROUGH AVAILABLE COLORS AND COLOR CODES TO FIND MATCHES
 # color[1] for available_car_color in available_car_colors for color in colors if model[0] == available_car_color[0] if available_car_color[1] == color[0]
-
-car_dict = {make[1]:{model[1]:[color[1] for available_car_color in available_car_colors for color in colors if model[0] == available_car_color[0] if available_car_color[1] == color[0]] for model in models if model[2] == make[0]} for make in makes}
+car_dict = {
+  make[1]:
+    {
+      model[1]: 
+        [color[1] for available_car_color in available_car_colors 
+          for color in colors if model[0] == available_car_color[0] if available_car_color[1] == color[0]] for model in models if model[2] == make[0]
+    }
+     for make in makes
+  }
 
 # STEP 4 PRINT IT OUT
-
-# line_break = '\n'
-# divider_break = '------------------------'
-# print("hi" + line_break + divider_break + line_break + "bye")
-
 for k, v in car_dict.items():
   print('\n' + k + '\n-----------------------------')
   for model in v:
